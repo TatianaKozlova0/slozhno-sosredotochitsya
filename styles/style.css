@@ -3,17 +3,33 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color);
-  font-family: var(--page-font);
+  font-family: var(--page-font), monospace;
   background-color: var(--bg-color);
   background-image: url(/images/cover-image-dark.png);
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
 .header {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  
+  min-height: 100vh;
+  min-block-size: 667px;
+}
+
+/*tablet*/
+@media (768px <= width < 1024px) {
+  .header {
+    min-block-size: 1024px;
+  }
+} 
+
+/*desktop*/
+@media (width >= 1024px) {
+  .header {
+    min-block-size: 600px;
+  }
 }
 
 .header::before,
@@ -84,7 +100,7 @@
   flex-direction: column;
   align-items: end;
   gap: 13px;
-  margin-block-start: 40.5px;
+  margin-block-start: 37px;
   margin-inline-end: var(--ten-px);
   color: var(--button-color);
 }
@@ -117,7 +133,7 @@
   right: 30px;
   align-self: end;
   user-select: none;
-  
+  text-transform: uppercase;
 }
 
 /* tablet, desktop */
@@ -156,9 +172,14 @@
   outline: 1px solid var(--button-color);
 }
 
-.header__theme-menu-button:focus {
-  outline: none;
+.header__theme-menu-button:focus-visible {
+  outline: 1px solid var(--button-color);
+  border-block-end: none;
+}
+
+.header__theme-menu-button:active {
   border-block-end: 1px solid var(--button-color);
+  outline: none;
 }
 
 .header__theme-menu-button_active {
@@ -276,7 +297,7 @@
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     flex-direction: row;
-    gap: var(--twenty-px);
+    gap: var(--ten-px);
     margin: var(--twenty-px);
     margin-block-start: 60px;
   }
@@ -356,12 +377,16 @@
 }
 
 .text-link:hover {
-  text-decoration: underline;
+  border-block-end: 1px solid var(--text-color);
 }
 
 .text-link:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.text-link:focus-visible {
   outline: 1px solid var(--text-color);
-  text-decoration: underline;
 }
 
 .what {
@@ -481,7 +506,7 @@
     grid-template-columns: 0.5fr 1fr;
     flex-direction: row;
     margin: var(--twenty-px);
-    gap: var(--twenty-px);
+    gap: var(--ten-px);
     margin-block-start: 70px;
     margin-block-end: 30px;
   }
@@ -587,7 +612,7 @@
 @media (768px <= width < 1024px) {
   .how-pictures {
     width: 100%;
-    margin-block-start: 42px;
+    margin-block-start: 40px;
   }
 }
 
@@ -672,6 +697,7 @@
 @media (width >= 1024px) {
   .picture:last-of-type {
     padding-block-start: 5px;
+    max-height: 432px;
   }
 }
 
@@ -679,12 +705,23 @@
   display: flex;
   flex-direction: column;
   margin-block-start: 30px;
+  min-height: 100vh;
+  min-block-size: 667px;
+}
+
+/*tablet*/
+@media (768px <= width < 1024px) {
+  .footer {
+    min-block-size: 1024px;
+    margin-block-start: 27px;
+  }
 }
 
 /*desktop*/
 @media (width >= 1024px) {
   .footer {
-    margin-block-start: var(--ten-px);
+    margin-block-start: var(--twenty-px);
+    min-block-size: 600px;
   }
 }
 
@@ -694,19 +731,19 @@
   justify-content: center;
   align-items: center;
   color: var(--special-color);
-  text-shadow: 2px 2px 0px var(--accent-color);
+  text-shadow: var(--title-shadow);
   font-weight: var(--bold);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  margin-block-start: 250px;
+  margin-block-start: 253px;
   margin-block-end: 250px;
   text-align: center;
-  line-height: 82.5%;;
+  line-height: 82.5%;
 }
 
 /*tablet*/
 @media (768px <= width < 1024px) {
   .footer__decorated-text {
-    margin-block-start: 416px;
+    margin-block-start: 419px;
     margin-block-end: 417px;
   }
 }
@@ -717,5 +754,6 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-block-start: 320px;
     margin-block-end: 274px;
+    text-shadow: var(--special-shadow);
   }
 }

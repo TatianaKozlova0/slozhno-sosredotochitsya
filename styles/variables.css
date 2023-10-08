@@ -16,6 +16,8 @@
   --bold: 700;
   --normal: 400;
   --text-shadow: 2.5px 2px 0px #ff0070;
+  --special-shadow: 4px 4px 0px #ff0070;
+  --title-shadow: 4px 4px 0px #ff0070;
   --ten-px: 10px;
   --twenty-px: 20px;
 }

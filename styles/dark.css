@@ -18,9 +18,9 @@
   --heading-color: #FF0070;
   --button-color: #FF0070;
   --special-shadow: 4px 4px 0px #ff0070;
+  --title-shadow: 4px 4px 0px #ff0070;
+  background-image: url(/images/cover-image-dark.png);
 }
-
-
 
 @media (width >= 1024px) {
   .cover-zone-title {
