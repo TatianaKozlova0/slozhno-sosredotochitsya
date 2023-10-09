@@ -146,7 +146,6 @@
 }
 
 .header__theme-menu-button {
-  border: none;
   background-color: transparent;
   text-transform: lowercase;
   padding-inline: 13px;
