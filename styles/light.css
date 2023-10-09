@@ -18,6 +18,7 @@
   --text-shadow: 2.5px 2px 0px #FF8DCB;
   --heading-color:#353430;
   --button-color: #353430;
+  --button-hover: #32312d66;
   --special-shadow: 4px 4px 0px #FF0070;
   --title-shadow: 4px 4px 0px #FF8DCB;
 }
@@ -53,6 +54,7 @@
     --text-shadow: 2.5px 2px 0px #FF8DCB;
     --heading-color:#353430;
     --button-color: #353430;
+    --button-hover: #32312d66;
     --title-shadow: 4px 4px 0px #FF8DCB;
     --special-shadow: 4px 4px 0px #FF0070;
   }
@@ -61,8 +63,26 @@
     background-image: url(/images/cover-image-light.png);
   }
 
-  .page .header__rec-sign {
+  .page.theme_light .header__rec-sign {
     display: none;
+  }
+
+  .page.theme_auto .header__rec-sign {
+    display: none;
+  }
+
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--button-hover);
+  }
+
+  .title-decor {
+    color: var(--title-color);
+  }
+
+  .why__heading,
+  .what__heading,
+  .how__heading {
+    color: var(--heading-color);
   }
 }
 
