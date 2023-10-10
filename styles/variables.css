@@ -8,17 +8,17 @@
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
   --special-color: #DB00FF;
-  --page-font: 'IBM Plex mono';
   --heading-color: #FF0070;
   --title-color: #000028;
   --button-color: #FF0070;
   --button-hover: #ff007066;
-  --lh: 23.4px;
-  --bold: 700;
-  --normal: 400;
   --text-shadow: 2.5px 2px 0px #ff0070;
   --special-shadow: 4px 4px 0px #ff0070;
   --title-shadow: 4px 4px 0px #ff0070;
+  --page-font: 'IBM Plex mono';
+  --lh: 23.4px;
+  --bold: 700;
+  --normal: 400;
   --ten-px: 10px;
   --twenty-px: 20px;
 }
