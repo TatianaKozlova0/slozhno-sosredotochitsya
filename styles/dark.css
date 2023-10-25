@@ -20,7 +20,7 @@
   --button-hover: #ff007066;
   --special-shadow: 4px 4px 0px #ff0070;
   --title-shadow: 4px 4px 0px #ff0070;
-  background-image: url(/images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
 }
 
 @media (width >= 1024px) {
